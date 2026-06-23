@@ -39,7 +39,7 @@ dns:
       - "https://doh.pub/dns-query"
 
 proxies:
-  # ---------- 日本节点 (jp) ----------
+  # ---------- Japan nodes ----------
   - name: vless-reality-vision-waao-vpn-jp
     type: vless
     server: 20.189.248.10
@@ -108,7 +108,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
 
-  # ---------- 马来西亚节点 (my) ----------
+  # ---------- Malaysia nodes ----------
   - name: vless-reality-vision-waao-vpn-my
     type: vless
     server: 172.197.176.52
@@ -177,7 +177,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
 
-  # ---------- 香港节点 (ea) ----------
+  # ---------- Hong Kong nodes ----------
   - name: vless-reality-vision-waao-vpn-ea
     type: vless
     server: 20.6.129.25
@@ -247,7 +247,7 @@ proxies:
     skip-cert-verify: true
 
 proxy-groups:
-  - name: 璐熻浇鍧囪　
+  - name: Load Balance
     type: load-balance
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -269,7 +269,7 @@ proxy-groups:
       - tuic5-waao-vpn-ea
       - anytls-waao-vpn-ea
 
-  - name: 鑷姩閫夋嫨
+  - name: Auto Select
     type: url-test
     url: https://www.gstatic.com/generate_204
     interval: 300
@@ -291,11 +291,11 @@ proxy-groups:
       - tuic5-waao-vpn-ea
       - anytls-waao-vpn-ea
 
-  - name: 馃實閫夋嫨浠ｇ悊鑺傜偣
+  - name: Select Proxy
     type: select
     proxies:
-      - 璐熻浇鍧囪　
-      - 鑷姩閫夋嫨
+      - Load Balance
+      - Auto Select
       - DIRECT
       - vless-reality-vision-waao-vpn-jp
       - vmess-ws-waao-vpn-jp
@@ -316,4 +316,4 @@ proxy-groups:
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,馃實閫夋嫨浠ｇ悊鑺傜偣
+  - MATCH,Select Proxy
