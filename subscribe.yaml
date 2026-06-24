@@ -40,7 +40,7 @@ dns:
 
 proxies:
   # ---------- Japan nodes ----------
-  - name: vless-reality-vision-waao-vpn-jp
+  - name: jp-1
     type: vless
     server: 20.189.248.10
     port: 59404
@@ -55,7 +55,7 @@ proxies:
       short-id: 99866800
     client-fingerprint: chrome
 
-  - name: vmess-ws-waao-vpn-jp
+  - name: jp-2
     type: vmess
     server: 20.189.248.10
     port: 2095
@@ -71,7 +71,7 @@ proxies:
       headers:
         Host: www.bing.com
 
-  - name: hysteria2-waao-vpn-jp
+  - name: jp-3
     type: hysteria2
     server: 20.189.248.10
     port: 48319
@@ -82,7 +82,7 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: tuic5-waao-vpn-jp
+  - name: jp-4
     server: 20.189.248.10
     port: 14643
     type: tuic
@@ -96,7 +96,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
 
-  - name: anytls-waao-vpn-jp
+  - name: jp-5
     type: anytls
     server: 20.189.248.10
     port: 35496
@@ -109,7 +109,7 @@ proxies:
     skip-cert-verify: true
 
   # ---------- Malaysia nodes ----------
-  - name: vless-reality-vision-waao-vpn-my
+  - name: my-1
     type: vless
     server: 172.197.176.52
     port: 16673
@@ -124,7 +124,7 @@ proxies:
       short-id: 1a0a23a1
     client-fingerprint: chrome
 
-  - name: vmess-ws-waao-vpn-my
+  - name: my-2
     type: vmess
     server: 172.197.176.52
     port: 8080
@@ -140,7 +140,7 @@ proxies:
       headers:
         Host: www.bing.com
 
-  - name: hysteria2-waao-vpn-my
+  - name: my-3
     type: hysteria2
     server: 172.197.176.52
     port: 49839
@@ -151,7 +151,7 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: tuic5-waao-vpn-my
+  - name: my-4
     server: 172.197.176.52
     port: 13612
     type: tuic
@@ -165,7 +165,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
 
-  - name: anytls-waao-vpn-my
+  - name: my-5
     type: anytls
     server: 172.197.176.52
     port: 17837
@@ -178,7 +178,7 @@ proxies:
     skip-cert-verify: true
 
   # ---------- Hong Kong nodes ----------
-  - name: vless-reality-vision-waao-vpn-ea
+  - name: hk-1
     type: vless
     server: 20.6.129.25
     port: 28509
@@ -193,7 +193,7 @@ proxies:
       short-id: dab9f049
     client-fingerprint: chrome
 
-  - name: vmess-ws-waao-vpn-ea
+  - name: hk-2
     type: vmess
     server: 20.6.129.25
     port: 2095
@@ -209,7 +209,7 @@ proxies:
       headers:
         Host: www.bing.com
 
-  - name: hysteria2-waao-vpn-ea
+  - name: hk-3
     type: hysteria2
     server: 20.6.129.25
     port: 40475
@@ -220,7 +220,7 @@ proxies:
     skip-cert-verify: true
     fast-open: true
 
-  - name: tuic5-waao-vpn-ea
+  - name: hk-4
     server: 20.6.129.25
     port: 45161
     type: tuic
@@ -234,7 +234,7 @@ proxies:
     sni: www.bing.com
     skip-cert-verify: true
 
-  - name: anytls-waao-vpn-ea
+  - name: hk-5
     type: anytls
     server: 20.6.129.25
     port: 56170
@@ -253,21 +253,21 @@ proxy-groups:
     interval: 300
     strategy: round-robin
     proxies:
-      - vless-reality-vision-waao-vpn-jp
-      - vmess-ws-waao-vpn-jp
-      - hysteria2-waao-vpn-jp
-      - tuic5-waao-vpn-jp
-      - anytls-waao-vpn-jp
-      - vless-reality-vision-waao-vpn-my
-      - vmess-ws-waao-vpn-my
-      - hysteria2-waao-vpn-my
-      - tuic5-waao-vpn-my
-      - anytls-waao-vpn-my
-      - vless-reality-vision-waao-vpn-ea
-      - vmess-ws-waao-vpn-ea
-      - hysteria2-waao-vpn-ea
-      - tuic5-waao-vpn-ea
-      - anytls-waao-vpn-ea
+      - jp-1
+      - jp-2
+      - jp-3
+      - jp-4
+      - jp-5
+      - my-1
+      - my-2
+      - my-3
+      - my-4
+      - my-5
+      - hk-1
+      - hk-2
+      - hk-3
+      - hk-4
+      - hk-5
 
   - name: Auto Select
     type: url-test
@@ -275,21 +275,21 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - vless-reality-vision-waao-vpn-jp
-      - vmess-ws-waao-vpn-jp
-      - hysteria2-waao-vpn-jp
-      - tuic5-waao-vpn-jp
-      - anytls-waao-vpn-jp
-      - vless-reality-vision-waao-vpn-my
-      - vmess-ws-waao-vpn-my
-      - hysteria2-waao-vpn-my
-      - tuic5-waao-vpn-my
-      - anytls-waao-vpn-my
-      - vless-reality-vision-waao-vpn-ea
-      - vmess-ws-waao-vpn-ea
-      - hysteria2-waao-vpn-ea
-      - tuic5-waao-vpn-ea
-      - anytls-waao-vpn-ea
+      - jp-1
+      - jp-2
+      - jp-3
+      - jp-4
+      - jp-5
+      - my-1
+      - my-2
+      - my-3
+      - my-4
+      - my-5
+      - hk-1
+      - hk-2
+      - hk-3
+      - hk-4
+      - hk-5
 
   - name: Select Proxy
     type: select
@@ -297,21 +297,21 @@ proxy-groups:
       - Load Balance
       - Auto Select
       - DIRECT
-      - vless-reality-vision-waao-vpn-jp
-      - vmess-ws-waao-vpn-jp
-      - hysteria2-waao-vpn-jp
-      - tuic5-waao-vpn-jp
-      - anytls-waao-vpn-jp
-      - vless-reality-vision-waao-vpn-my
-      - vmess-ws-waao-vpn-my
-      - hysteria2-waao-vpn-my
-      - tuic5-waao-vpn-my
-      - anytls-waao-vpn-my
-      - vless-reality-vision-waao-vpn-ea
-      - vmess-ws-waao-vpn-ea
-      - hysteria2-waao-vpn-ea
-      - tuic5-waao-vpn-ea
-      - anytls-waao-vpn-ea
+      - jp-1
+      - jp-2
+      - jp-3
+      - jp-4
+      - jp-5
+      - my-1
+      - my-2
+      - my-3
+      - my-4
+      - my-5
+      - hk-1
+      - hk-2
+      - hk-3
+      - hk-4
+      - hk-5
 
 rules:
   - GEOIP,LAN,DIRECT
